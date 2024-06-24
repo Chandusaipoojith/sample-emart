@@ -316,3 +316,37 @@ ul li {
 .subMenu ul li a:hover::before {
   transform: scaleX(1);
 }
+.see-more:hover{
+  background-color: #cf4a4a;
+}
+.signup-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  
+}
+.signin-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

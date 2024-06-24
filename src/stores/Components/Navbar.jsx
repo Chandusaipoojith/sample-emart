@@ -14,9 +14,11 @@ const Navbar = () => {
             <input type='text' placeholder='Search'/>
         </div>
         <div className="user">
+            <Link to="/sign" style={{textDecoration:"none",color:"white"}}>
             <div className="userdetail">
                 SignUp/SignIn
             </div>
+            </Link>
             <Link to ="/cart" style={{textDecoration:'none', color:'white'}}>
             <div className="cart">Cart</div>
             </Link>

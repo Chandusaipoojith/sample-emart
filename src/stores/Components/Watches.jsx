@@ -6,7 +6,7 @@ const Watches = () => {
   return (
     <>
     <Link to="/watch" style={{textDecoration:"none", color:"black", fontSize:"24px"}}> Watches</Link>
- 
+    <Link to= "/watch" style={{ marginLeft: '80%' ,textDecoration:"none", color:"black"} }><span className='see-more'>Click here to see more</span></Link>
     <div className='proSection'>
         {First.map((item)=>{
             return(

@@ -27,7 +27,7 @@ const MobileSingle = () => {
             <h3>{product.model}</h3>
           </div>
           <div className="ind-price space">
-            <h2>${product.price}</h2>
+            <h2>Price: ${product.price}</h2>
           </div>
           <div className="ind-desc space">
             <p>{product.description}</p>

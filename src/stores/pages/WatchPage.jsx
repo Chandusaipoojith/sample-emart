@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import { watchData } from '../data/watch'
 import Navbar from '../Components/Navbar'
 import { Link } from 'react-router-dom'
 
+
 const WatchPage = () => {
   const [selectedBrands, setSelectedBrands] = useState([])
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleBrand = (brand) => {
     if (selectedBrands.includes(brand)) {
@@ -17,6 +19,19 @@ const WatchPage = () => {
   const filteredProducts = selectedBrands.length
     ? watchData.filter((watch) => selectedBrands.includes(watch.brand))
     : watchData
+    useEffect(() => {
+      const storedPosition = localStorage.getItem('scrollPosition');
+      if (storedPosition) setScrollPosition(JSON.parse(storedPosition));
+  }, []);
+
+  useEffect(() => {
+      localStorage.setItem('scrollPosition', JSON.stringify(scrollPosition));
+  }, [scrollPosition]);
+
+  useEffect(() => {
+      window.scrollTo(0, scrollPosition);
+  }, [scrollPosition]);
+
 
   return (
     <>

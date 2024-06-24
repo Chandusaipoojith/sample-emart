@@ -32,7 +32,7 @@ const LaptopSingle = () => {
 
 
       <div className='ind-price space'>
-        <h2>₹{product.price}</h2>
+        <h2>Price: ${product.price}</h2>
       </div>
 
 

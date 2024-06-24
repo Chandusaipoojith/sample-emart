@@ -15,7 +15,7 @@ const UserCart = () => {
         ) : (
           <div>
             {cartItems.map((item) => (
-              <div className='cart-section' key={item.id}>
+              <div className='cart-section' key={`${item.id}-${item.model}`}>
                 <div className="cart-img">
                   <img src={item.image} alt="" />
                 </div>
@@ -40,6 +40,7 @@ const UserCart = () => {
                 >
                   Remove
                 </button>
+                <p>Price for this item: ${(item.quantity * item.price).toFixed(2)}</p>
               </div>
             ))}
           </div>

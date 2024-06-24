@@ -12,7 +12,9 @@ import AcPage  from "./stores/pages/AcPage";
 import AcSingle from "./singles/AcSingle";
 import MobilePage from "./stores/pages/MobilePage";
 import MobileSingle from "./singles/MobileSingle";
-import UserCart from "./stores/UserCart.jsx"
+import UserCart from "./stores/UserCart.jsx";
+import Signup from "./stores/pages/Sign.jsx";
+import Signin from "./stores/pages/Signin.jsx";
 const App=()=>{
   return (
     <>
@@ -29,6 +31,8 @@ const App=()=>{
         <Route path="/mobile" element={<MobilePage/>}/>
         <Route path="/mobile/:id" element={<MobileSingle/>}/>
         <Route path="/cart" element={<UserCart/>}/>
+        <Route path="/sign" element={<Signup/>}/>
+        <Route path="/signin" element={<Signin/>}/>
       </Routes>
  
     
